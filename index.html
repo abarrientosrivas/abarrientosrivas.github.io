@@ -4,32 +4,53 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <title>Welcome</title>
 </head>
 
-<body>
-    <header>
-        <img src="/assets/self_minimal_light.png" alt="">
-        <div>BARRIENTOS RIVAS</div>
-        <div>ALEXIS</div>
-        <nav>
-            <ul>
-                <a href="#hero">Welcome</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </ul>
-        </nav>
+<body class="flex flex-col">
+    <header class="flex sticky top-0 justify-between items-center md:p-2 bg-yellow-100">
+        <div class="flex items-center border rounded m-1 p-1 bg-white">
+            <img src="/assets/rune_black.png" alt="logo" class="h-8 w-8">
+            <div class="pr-2">
+                <div>BARRIENTOS RIVAS</div>
+                <div>ALEXIS</div>
+            </div>
+        </div>
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center border rounded-full p-4 bg-white">
+            <nav>
+                <ul class="flex space-x-4">
+                    <li>
+                        <a href="#hero">Welcome</a>
+                    </li>
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="border rounded m1 p-2 px-4 bg-orange-300">
+            Download CV
+        </div>
     </header>
     <main>
-        <section id="hero">
-            <img src="/assets/self_minimal_light.png" alt="">
+        <section id="hero" class="min-h-[80vh] py-16 flex flex-col items-center justify-center text-center">
+            <img src="/assets/rune_black.png" alt="logo" class="w-40">
             <h1>&lt;Welcome/&gt;</h1>
             <p>I am a Software Developer. Here to provide tailored and impactful solutions.</p>
         </section>
-        <section id="about">
+        <section id="about" class="py-16 px-4 max-w-4xl mx-auto bg-red-100 scroll-mt-20">
             <h2>About me</h2>
-            <p>Software Developer with a strong foundation as a Programmer Analyst and three years of experience delivering tailored solutions for the metallurgical industry. I aim to contribute to software innovation with impactful solutions.</p>
+            <p>Software Developer with a strong foundation as a Programmer Analyst and three years of experience
+                delivering tailored solutions for the metallurgical industry. I aim to contribute to software innovation
+                with impactful solutions.</p>
             <h3>Languages:</h3>
             <ul>
                 <li>C#</li>
@@ -58,11 +79,12 @@
                 <li>Project Managing</li>
             </ul>
         </section>
-        <section id="projects">
+        <section id="projects" class="py-12 px-4 max-w-4xl mx-auto scroll-mt-20">
             <h2>My work</h2>
             <h3>ALOTO</h3>
             <img src="/assets/placeholder.svg" alt="placeholder">
-            <p>Aluar Lock-Out Tag-Out system lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p>Aluar Lock-Out Tag-Out system lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. </p>
             <ul>
                 <li>Vite</li>
                 <li>React</li>
@@ -73,7 +95,8 @@
                 <li>Active Directory</li>
             </ul>
             <h3>QuéCompraste?</h3>
-            <p>Receipt reader, purchase predictor, lorem ipsum odor amet, consectetuer adipiscing elit. Placerat mattis feugiat ornare nascetur netus erat? Ridiculus eget volutpat finibus felis lobortis cursus.</p>
+            <p>Receipt reader, purchase predictor, lorem ipsum odor amet, consectetuer adipiscing elit. Placerat mattis
+                feugiat ornare nascetur netus erat? Ridiculus eget volutpat finibus felis lobortis cursus.</p>
             <ul>
                 <li>Angular</li>
                 <li>FastAPI</li>
@@ -86,20 +109,26 @@
             <img src="/assets/placeholder.svg" alt="placeholder">
             <h3>Utilidades SAP</h3>
             <img src="/assets/placeholder.svg" alt="placeholder">
-            <p>Scheduled SAP CLI table exporter with dynamic parametrization, lorem ipsum odor amet, consectetuer adipiscing elit. Ipsum quis mollis phasellus feugiat condimentum scelerisque luctus gravida. Mattis faucibus litora gravida quisque ridiculus.</p>
+            <p>Scheduled SAP CLI table exporter with dynamic parametrization, lorem ipsum odor amet, consectetuer
+                adipiscing elit. Ipsum quis mollis phasellus feugiat condimentum scelerisque luctus gravida. Mattis
+                faucibus litora gravida quisque ridiculus.</p>
             <ul>
                 <li>WPF</li>
                 <li>SAP Scripting Engine</li>
                 <li>.NET Core</li>
             </ul>
         </section>
-        <section id="contact">
+        <section id="contact" class="py-12 px-4 max-w-4xl mx-auto bg-red-100 scroll-mt-20">
             <h2>Reach me</h2>
             <p>email@email.com</p>
             <p>+549111223344</p>
         </section>
     </main>
-    <footer>Footer</footer>
+    <footer class="py-8 bg-gray-400">
+        <div class="px-4 max-w-4xl mx-auto">
+            Footer
+        </div>
+    </footer>
 </body>
 
 </html>
