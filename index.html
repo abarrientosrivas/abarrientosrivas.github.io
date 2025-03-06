@@ -8,18 +8,18 @@
     <title>abarrientosrivas</title>
 </head>
 
-<body class="flex flex-col">
-    <header class="flex sticky top-0 justify-between items-center md:p-2 bg-yellow-100">
-        <div class="flex items-center border rounded m-1 p-1 bg-white">
-            <img src="/assets/rune_black.png" alt="logo" class="h-8 w-8">
-            <div class="pr-2">
+<body>
+    <header class="page-header">
+        <div class="brand-card">
+            <img src="/assets/rune_black.png" alt="logo" class="brand-logo">
+            <div>
                 <div>BARRIENTOS RIVAS</div>
                 <div>ALEXIS</div>
             </div>
         </div>
-        <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center border rounded-full p-4 bg-white">
+        <div class="primary-navigation">
             <nav>
-                <ul class="flex space-x-4">
+                <ul>
                     <li>
                         <a href="#hero">Welcome</a>
                     </li>
@@ -35,17 +35,14 @@
                 </ul>
             </nav>
         </div>
-        <div class="border rounded m1 p-2 px-4 bg-orange-300">
-            Download CV
-        </div>
     </header>
     <main>
-        <section id="hero" class="min-h-[80vh] py-16 flex flex-col items-center justify-center text-center">
-            <img src="/assets/rune_black.png" alt="logo" class="w-40">
+        <section id="hero" class="content-row hero-section">
+            <img src="/assets/rune_black.png" alt="logo" class="hero-logo">
             <h1>&lt;Welcome/&gt;</h1>
             <p>I am a Software Developer. Here to provide tailored and impactful solutions.</p>
         </section>
-        <section id="about" class="py-16 px-4 max-w-4xl mx-auto bg-red-100 scroll-mt-20">
+        <section id="about" class="content-row">
             <h2>About me</h2>
             <p>Software Developer with a strong foundation as a Programmer Analyst and three years of experience
                 delivering tailored solutions for the metallurgical industry. I aim to contribute to software innovation
@@ -78,7 +75,7 @@
                 <li>Project Managing</li>
             </ul>
         </section>
-        <section id="projects" class="py-12 px-4 max-w-4xl mx-auto scroll-mt-20">
+        <section id="projects" class="content-row">
             <h2>My work</h2>
             <h3>ALOTO</h3>
             <img src="/assets/placeholder.svg" alt="placeholder">
@@ -117,14 +114,14 @@
                 <li>.NET Core</li>
             </ul>
         </section>
-        <section id="contact" class="py-12 px-4 max-w-4xl mx-auto bg-red-100 scroll-mt-20">
+        <section id="contact" class="content-row">
             <h2>Reach me</h2>
             <p>email@email.com</p>
             <p>+549111223344</p>
         </section>
     </main>
-    <footer class="py-8 bg-gray-400">
-        <div class="px-4 max-w-4xl mx-auto">
+    <footer>
+        <div>
             Footer
         </div>
     </footer>
