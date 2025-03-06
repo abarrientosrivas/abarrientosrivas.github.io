@@ -63,6 +63,7 @@ img {
   display: none;
   position: sticky;
   width: 100%;
+  background: white;
 }
 
 .navigation ul {
