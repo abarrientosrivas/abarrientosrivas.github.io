@@ -10,14 +10,17 @@
 
 <body>
     <header class="page-header">
-        <div class="brand-card">
-            <img src="/assets/rune_black.png" alt="logo" class="brand-logo">
-            <div>
-                <div>BARRIENTOS RIVAS</div>
-                <div>ALEXIS</div>
+        <div class="page-header-bar">
+            <div class="brand-card">
+                <img src="/assets/rune_black.png" alt="logo">
+                <div>
+                    <div>BARRIENTOS RIVAS</div>
+                    <div>ALEXIS</div>
+                </div>
             </div>
+            <button id="navToggle" class="navigation-toggle">☰</button>
         </div>
-        <div class="primary-navigation">
+        <div id="nav" class="navigation">
             <nav>
                 <ul>
                     <li>
@@ -125,6 +128,15 @@
             Footer
         </div>
     </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const nav = document.getElementById('nav');
+
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('visible');
+        });
+    </script>
 </body>
 
 </html>

@@ -6,49 +6,104 @@
   padding: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 .page-header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   position: sticky;
   top: 0;
+  z-index: 10;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    box-shadow: none;
+  }
+}
+
+.page-header-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background: white;
+}
+
+@media (min-width: 768px) {
+  .page-header-bar {
+    background: none;
+    margin-top: 0.5rem;
+  }
 }
 
 .brand-card {
   display: flex;
-  align-items: center;
-  border: 1px solid;
-  border-radius: 0.25rem;
-  padding: 0.25rem;
-  background-color: white;
+  background: white;
+  padding: 0.5rem;
 }
 
-.brand-logo {
+.brand-card img {
   height: 2rem;
 }
 
-.primary-navigation {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
-  border-radius: 9999px;
-  padding: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: white;
-  visibility: hidden;
+@media (min-width: 768px) {
+  .brand-card {
+    padding: 0.5rem 1rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  }
 }
 
-.primary-navigation ul {
+.navigation {
+  display: none;
+  position: sticky;
+  width: 100%;
+}
+
+.navigation ul {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
+  padding: 1rem;
+}
+
+.navigation.visible {
+  display: block;
 }
 
 @media (min-width: 768px) {
-  .primary-navigation {
-    visibility: visible;
+  .navigation {
+    display: block;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+      -1px 0px 3px rgba(0, 0, 0, 0.3),
+      1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 9999px;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+  }
+}
+
+.navigation-toggle {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .navigation-toggle {
+    display: none;
   }
 }
 
@@ -56,7 +111,6 @@
   padding: 5rem 2rem;
   margin: 0 auto;
   max-width: 56rem;
-  scroll-margin-top: 5rem;
 }
 
 .hero-section {
