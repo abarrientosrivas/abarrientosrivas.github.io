@@ -56,19 +56,19 @@ button {
 
 /* Orbitron by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
    See Orbitron-OFL.md for the full license text. */
-   @font-face {
-    font-family: 'Orbitron';
-    src: url('/assets/fonts/orbitron-medium-webfont.woff') format('woff');
-    font-weight: 300; /* Light */
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Orbitron';
-    src: url('/assets/fonts/orbitron-black-webfont.woff') format('woff');
-    font-weight: 900; /* Bold */
-    font-style: normal;
-  }
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/orbitron-medium-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/orbitron-black-webfont.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
 
 html {
   font-family: 'LeagueSpartan', serif;
@@ -206,7 +206,7 @@ img {
   .menu ul {
     flex-direction: row;
   }
-  
+
   .menu hr {
     height: auto;
     width: 1px;
