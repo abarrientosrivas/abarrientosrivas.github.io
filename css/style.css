@@ -145,6 +145,14 @@ img {
   padding: 0.5rem;
 }
 
+.menu hr {
+  background-color: var(--text);
+  height: 1px;
+  opacity: 50%;
+  border-radius: 9999px;
+  margin: 0 1rem;
+}
+
 .menu-icon {
   height: 1rem;
 }
@@ -177,15 +185,20 @@ img {
       -1px 0px 3px var(--soft-shadow),
       1px 1px 3px var(--soft-shadow);
     border-radius: 9999px;
-    width: 20rem;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1rem;
+    padding: 0 1rem;
   }
 
   .menu ul {
     flex-direction: row;
-    margin: 0 1.25rem;
+  }
+  
+  .menu hr {
+    height: auto;
+    width: 1px;
+    margin: 0.5rem 0;
   }
 
   .menu-button {
