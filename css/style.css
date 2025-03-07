@@ -31,7 +31,6 @@ img {
 .page-header-bar {
   display: flex;
   justify-content: space-between;
-  width: 100%;
   align-items: center;
   background: white;
 }
@@ -64,7 +63,6 @@ img {
 
 .navigation {
   display: none;
-  width: 100%;
   background: white;
 }
 
@@ -72,7 +70,22 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.navigation a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 16px;
+}
+
+.navigation .icon {
+  height: 1rem;
+}
+
+.navigation img {
+  max-height: 1rem;
 }
 
 .navigation.visible {
@@ -89,7 +102,7 @@ img {
       -1px 0px 3px rgba(0, 0, 0, 0.3),
       1px 1px 3px rgba(0, 0, 0, 0.3);
     border-radius: 9999px;
-    width: auto;
+    width: 20rem;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1rem;
@@ -97,10 +110,28 @@ img {
 
   .navigation ul {
     flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.25rem 1.25rem;
+  }
+
+  .navigation li {
+    display: flex;
+  }
+
+  .navigation a {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .navigation .icon {
+    display: flex;
+    height: 1.25rem;
+    align-items: center;
   }
 }
 
 .navigation-toggle {
+  height: 1rem;
   display: block;
 }
 
@@ -113,7 +144,7 @@ img {
 .content-row {
   padding: 4rem 2rem;
   margin: 0 auto;
-  max-width: 48rem;
+  max-width: 42rem;
 }
 
 .hero-section {
