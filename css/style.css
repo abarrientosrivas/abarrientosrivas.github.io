@@ -10,7 +10,17 @@
   background: none;
 }
 
+/* LeagueSpartan by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
+   See OFL.md for the full license text. */
+@font-face {
+  font-family: 'LeagueSpartan';
+    src: url('/assets/fonts/LeagueSpartan-VF.woff') format('woff2-variations');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
+  font-family: 'LeagueSpartan', serif;
   font-size: 20px;
   line-height: 1;
 }
@@ -32,24 +42,11 @@ img {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 768px) {
-  .page-header {
-    box-shadow: none;
-  }
-}
-
 .page-header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: white;
-}
-
-@media (min-width: 768px) {
-  .page-header-bar {
-    background: none;
-    margin-top: 0.5rem;
-  }
 }
 
 .brand-card {
@@ -63,6 +60,15 @@ img {
 }
 
 @media (min-width: 768px) {
+  .page-header {
+    box-shadow: none;
+  }
+
+  .page-header-bar {
+    background: none;
+    margin-top: 0.5rem;
+  }
+
   .brand-card {
     padding: 0.5rem 1rem;
     border-bottom-right-radius: 0.5rem;
