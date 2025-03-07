@@ -1,10 +1,10 @@
 :root {
   --background-light: #ffffff;
   --text-light: #000000;
-  --soft-shadow-light: #000000cc;
+  --soft-shadow-light: #00000066;
   --background-dark: #000000;
   --text-dark: #ffffff;
-  --soft-shadow-dark: #ffffffcc;
+  --soft-shadow-dark: #ffffff66;
 
   --background: var(--background-light);
   --text: var(--text-light);
@@ -56,10 +56,19 @@ button {
 
 /* Orbitron by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
    See Orbitron-OFL.md for the full license text. */
-@font-face {
-  font-family: 'Orbitron';
-  src: url('/assets/fonts/orbitron-black-webfont.woff') format('woff');
-}
+   @font-face {
+    font-family: 'Orbitron';
+    src: url('/assets/fonts/orbitron-medium-webfont.woff') format('woff');
+    font-weight: 300; /* Light */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Orbitron';
+    src: url('/assets/fonts/orbitron-black-webfont.woff') format('woff');
+    font-weight: 900; /* Bold */
+    font-style: normal;
+  }
 
 html {
   font-family: 'LeagueSpartan', serif;
@@ -120,6 +129,8 @@ img {
     padding: 0.5rem 1rem;
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    border: 1px solid var(--text);
+    border-left: 0;
     box-shadow: 1px 1px 3px var(--soft-shadow);
   }
 }
@@ -181,6 +192,7 @@ img {
     flex-direction: row;
     position: absolute;
     justify-content: space-between;
+    border: 1px solid var(--text);
     box-shadow:
       -1px 0px 3px var(--soft-shadow),
       1px 1px 3px var(--soft-shadow);
@@ -188,7 +200,7 @@ img {
     left: 50%;
     transform: translateX(-50%);
     margin-top: 1rem;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 
   .menu ul {
@@ -219,7 +231,7 @@ img {
 }
 
 .content-row {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem;
   margin: 0 auto;
   max-width: 42rem;
 }
@@ -231,6 +243,7 @@ img {
   justify-content: center;
   text-align: center;
   min-height: 90vh;
+  padding: 0rem 2rem;
 }
 
 .hero-logo {
@@ -238,5 +251,17 @@ img {
 }
 
 .hero-section h1 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', serif;
+  white-space: nowrap;
+}
+
+.hero-section .decoration-a {
+  font-weight: bold;
+}
+
+.hero-section .decoration-b {
+  font-size: 16px;
   font-family: 'Orbitron', serif;
 }
