@@ -1,20 +1,57 @@
+:root {
+  --background-light: #ffffff;
+  --text-light: #000000;
+  --soft-shadow-light: #000000cc;
+  --background-dark: #000000;
+  --text-dark: #ffffff;
+  --soft-shadow-dark: #ffffffcc;
+
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --soft-shadow: var(--soft-shadow-light);
+}
+
+[data-theme="light"] {
+  --background: var(--background-light);
+  --text: var(--text-light);
+  --soft-shadow: var(--soft-shadow-light);
+}
+
+[data-theme="dark"] {
+  --background: var(--background-dark);
+  --text: var(--text-dark);
+  --soft-shadow: var(--soft-shadow-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background: var(--background-dark);
+    --text: var(--text-dark);
+    --soft-shadow: var(--soft-shadow-dark);
+  }
+}
+
 * {
   list-style: none;
   text-decoration: none;
-  color: black;
   margin: 0;
   padding: 0;
+  color: var(--text);
   box-sizing: border-box;
   font-family: inherit;
   border: none;
   background: none;
 }
 
+button {
+  font: inherit;
+}
+
 /* LeagueSpartan by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
    See OFL.md for the full license text. */
 @font-face {
   font-family: 'LeagueSpartan';
-    src: url('/assets/fonts/LeagueSpartan-VF.woff') format('woff2-variations');
+  src: url('/assets/fonts/LeagueSpartan-VF.woff') format('woff2-variations');
   font-weight: normal;
   font-style: normal;
 }
@@ -23,6 +60,10 @@ html {
   font-family: 'LeagueSpartan', serif;
   font-size: 20px;
   line-height: 1;
+}
+
+body {
+  background-color: var(--background);
 }
 
 img {
@@ -39,19 +80,19 @@ img {
   left: 0;
   width: 100%;
   z-index: 10;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 3px var(--soft-shadow);
 }
 
 .page-header-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
+  background: var(--background);
 }
 
 .brand-card {
   display: flex;
-  background: white;
+  background: var(--background);
   padding: 0.5rem;
 }
 
@@ -73,56 +114,62 @@ img {
     padding: 0.5rem 1rem;
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 1px 3px var(--soft-shadow);
   }
 }
 
-.navigation {
+.menu {
   display: none;
-  background: white;
+  flex-direction: column;
+  background: var(--background);
 }
 
-.navigation ul {
+.menu-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.menu ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 0.5rem;
 }
 
-.navigation a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 16px;
-}
-
-.navigation .icon {
+.menu-icon {
   height: 1rem;
 }
 
-.navigation img {
+.menu-image {
   max-height: 1rem;
 }
 
-.navigation.visible {
-  display: block;
-}
-
-.navigation-toggle {
+.menu-toggle {
   margin: 0.5rem;
   height: 1rem;
   display: block;
 }
 
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: flex;
+}
+
 @media (min-width: 768px) {
-  .navigation {
-    display: block;
+  .menu {
+    display: flex;
+    flex-direction: row;
     position: absolute;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     box-shadow:
-      -1px 0px 3px rgba(0, 0, 0, 0.3),
-      1px 1px 3px rgba(0, 0, 0, 0.3);
+      -1px 0px 3px var(--soft-shadow),
+      1px 1px 3px var(--soft-shadow);
     border-radius: 9999px;
     width: 20rem;
     left: 50%;
@@ -130,28 +177,24 @@ img {
     margin-top: 1rem;
   }
 
-  .navigation ul {
+  .menu ul {
     flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0.25rem 1.25rem;
+    margin: 0 1.25rem;
   }
 
-  .navigation li {
-    display: flex;
-  }
-
-  .navigation a {
+  .menu-button {
     flex-direction: column;
-    gap: 0;
+    gap: 0.1rem;
+    font-size: 12px;
   }
 
-  .navigation .icon {
+  .menu-icon {
     display: flex;
     height: 1.25rem;
     align-items: center;
   }
 
-  .navigation-toggle {
+  .menu-toggle {
     display: none;
   }
 }
