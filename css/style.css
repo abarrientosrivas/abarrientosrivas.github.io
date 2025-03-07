@@ -48,12 +48,17 @@ button {
 }
 
 /* LeagueSpartan by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
-   See OFL.md for the full license text. */
+   See LeagueSpartan-OFL.md for the full license text. */
 @font-face {
   font-family: 'LeagueSpartan';
-  src: url('/assets/fonts/LeagueSpartan-VF.woff') format('woff2-variations');
-  font-weight: normal;
-  font-style: normal;
+  src: url('/assets/fonts/LeagueSpartan-VF.woff2') format('woff2-variations');
+}
+
+/* Orbitron by The League of Movement Type is licensed under the SIL Open Font License, Version 1.1.
+   See Orbitron-OFL.md for the full license text. */
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/assets/fonts/orbitron-black-webfont.woff') format('woff');
 }
 
 html {
@@ -94,6 +99,7 @@ img {
   display: flex;
   background: var(--background);
   padding: 0.5rem;
+  font-weight: bold;
 }
 
 .brand-card img {
@@ -216,4 +222,8 @@ img {
 
 .hero-logo {
   height: 8rem;
+}
+
+.hero-section h1 {
+  font-family: 'Orbitron', serif;
 }
