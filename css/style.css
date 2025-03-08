@@ -1,24 +1,29 @@
 :root {
   --background-light: #ffffff;
+  --background-light-alt: #e4e4e4;
   --text-light: #000000;
   --soft-shadow-light: #00000066;
   --background-dark: #000000;
+  --background-dark-alt: #090909;
   --text-dark: #ffffff;
   --soft-shadow-dark: #ffffff66;
 
   --background: var(--background-light);
+  --background-alt: var(--background-light-alt);
   --text: var(--text-light);
   --soft-shadow: var(--soft-shadow-light);
 }
 
 [data-theme="light"] {
   --background: var(--background-light);
+  --background-alt: var(--background-light-alt);
   --text: var(--text-light);
   --soft-shadow: var(--soft-shadow-light);
 }
 
 [data-theme="dark"] {
   --background: var(--background-dark);
+  --background-alt: var(--background-dark-alt);
   --text: var(--text-dark);
   --soft-shadow: var(--soft-shadow-dark);
 }
@@ -26,6 +31,7 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
     --background: var(--background-dark);
+    --background-alt: var(--background-dark-alt);
     --text: var(--text-dark);
     --soft-shadow: var(--soft-shadow-dark);
   }
@@ -233,7 +239,8 @@ img {
 .content-row {
   padding: 5rem 2rem;
   margin: 0 auto;
-  max-width: 42rem;
+  max-width: 48rem;
+  scroll-margin-top: 5rem;
 }
 
 .hero-section {
@@ -242,12 +249,13 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 90vh;
+  min-height: 85vh;
   padding: 0rem 2rem;
 }
 
 .hero-logo {
-  height: 8rem;
+  margin-top: 3rem;
+  height: 7rem;
 }
 
 .hero-section h1 {
@@ -264,4 +272,65 @@ img {
 .hero-section .decoration-b {
   font-size: 16px;
   font-family: 'Orbitron', serif;
+}
+
+.about-section {
+  border-radius: 1rem;
+  background-color: var(--background-alt);
+}
+
+.about-section h2 {
+  margin: 0.5rem 0rem;
+  font-family: 'Orbitron', serif;
+}
+
+.about-section p {
+  margin: 1rem;
+  text-align: center;
+}
+
+.stripes-stack {
+  padding: 1rem 0;
+}
+
+.stripes-stack hr {
+  background-color: var(--text);
+  height: 0.1rem;
+  border-radius: 9999px;
+  margin: 0.5rem 3rem;
+  box-shadow:
+    1px 1px 3px var(--soft-shadow),
+    -1px -1px 3px var(--soft-shadow);
+}
+
+.badges-stripe {
+  text-align: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+}
+
+.badges-stripe h3 {
+  margin: 0.5rem;
+  font-size: 16px;
+  white-space: nowrap;
+}
+
+.badges-stripe ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+  padding: 0 0.5rem;
+  width: 100%;
+  overflow: visible;
+}
+
+.badges-stripe li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  font-size: 12px;
 }
