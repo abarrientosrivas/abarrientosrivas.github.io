@@ -236,11 +236,13 @@ img {
   }
 }
 
-.content-row {
-  padding: 5rem 2rem;
-  margin: 0 auto;
-  max-width: 48rem;
+.page-row {
+  padding: 5rem 1rem;
   scroll-margin-top: 5rem;
+}
+
+.page-row h2 {
+  font-family: 'Orbitron', serif;
 }
 
 .hero-section {
@@ -265,11 +267,11 @@ img {
   white-space: nowrap;
 }
 
-.hero-section .decoration-a {
+.decoration-a {
   font-weight: bold;
 }
 
-.hero-section .decoration-b {
+.decoration-b {
   font-size: 16px;
   font-family: 'Orbitron', serif;
 }
@@ -279,58 +281,49 @@ img {
   background-color: var(--background-alt);
 }
 
-.about-section h2 {
-  margin: 0.5rem 0rem;
-  font-family: 'Orbitron', serif;
+.about-section .presentation {
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
 }
 
 .about-section p {
-  margin: 1rem;
-  text-align: center;
+  margin-bottom: 0.25rem;
 }
 
 .stripes-stack {
-  padding: 1rem 0;
+  text-align: center;
 }
 
 .stripes-stack hr {
   background-color: var(--text);
   height: 0.1rem;
   border-radius: 9999px;
-  margin: 0.5rem 3rem;
+  margin: 1rem 3rem;
   box-shadow:
     1px 1px 3px var(--soft-shadow),
     -1px -1px 3px var(--soft-shadow);
 }
 
-.badges-stripe {
-  text-align: center;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-}
-
 .badges-stripe h3 {
-  margin: 0.5rem;
+  padding: 0.5rem;
   font-size: 16px;
-  white-space: nowrap;
 }
 
 .badges-stripe ul {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-evenly;
-  gap: 0.5rem;
-  padding: 0 0.5rem;
-  width: 100%;
-  overflow: visible;
+  gap: 0.25rem 0rem;
+  padding: 0 0.25rem;
 }
 
 .badges-stripe li {
+  background-color: var(--background);
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem;
   height: 3rem;
+  width: 3rem;
   font-size: 12px;
 }
