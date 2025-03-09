@@ -245,6 +245,14 @@ img {
   font-family: 'Orbitron', serif;
 }
 
+@media (min-width: 768px) {
+  .page-row h2,
+  .page-row-content {
+    max-width: 48rem;
+    margin: auto;
+  }
+}
+
 .hero-section {
   display: flex;
   flex-direction: column;
@@ -277,53 +285,114 @@ img {
 }
 
 .about-section {
-  border-radius: 1rem;
   background-color: var(--background-alt);
 }
 
-.about-section .presentation {
+.presentation {
   margin-top: 0.75rem;
   margin-bottom: 1.25rem;
 }
 
-.about-section p {
+.presentation p {
   margin-bottom: 0.25rem;
 }
 
-.stripes-stack {
+.badges-stack {
   text-align: center;
 }
 
-.stripes-stack hr {
+.badges-stack hr {
   background-color: var(--text);
-  height: 0.1rem;
-  border-radius: 9999px;
+  height: 1px;
   margin: 1rem 3rem;
   box-shadow:
     1px 1px 3px var(--soft-shadow),
     -1px -1px 3px var(--soft-shadow);
 }
 
-.badges-stripe h3 {
-  padding: 0.5rem;
+.badges-group h3 {
+  padding: 0.5rem 0;
   font-size: 16px;
 }
 
-.badges-stripe ul {
+.badges-group ul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 0.25rem 0rem;
   padding: 0 0.25rem;
 }
 
-.badges-stripe li {
+.badges-group li {
   background-color: var(--background);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
   height: 3rem;
-  width: 3rem;
+  max-width: 3rem;
   font-size: 12px;
+}
+
+@media (min-width: 640px){
+  .badges-group ul {
+    justify-content: center;
+    gap: 0.25rem 1rem;
+  }
+
+  .badges-group li {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-section .page-row-content{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .presentation {
+    max-width: 16rem;
+    text-align: center;
+    margin: auto 0;
+  }
+
+  .presentation p {
+    margin-bottom: 1rem;
+  }
+
+  .badges-stack {
+    display: flex;
+    align-items: center;
+  }
+
+  .badges-stack hr {
+    height: 16rem;
+    width: 1px;
+    margin: 0 1.25rem;
+  }
+
+  .badges-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .badges-group ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .multiple-badge-stripes {
+    display: flex;
+    height: 20rem;
+  }
+
+  .multiple-badge-stripes ul:nth-child(even) {
+    margin-top: auto;
+  }
+
+  .multiple-badge-stripes ul:nth-child(odd) {
+    margin-bottom: auto;
+  }
 }
