@@ -304,14 +304,14 @@ img {
 .badges-stack hr {
   background-color: var(--text);
   height: 1px;
-  margin: 1rem 3rem;
+  margin: 0.75rem 3rem;
   box-shadow:
     1px 1px 3px var(--soft-shadow),
     -1px -1px 3px var(--soft-shadow);
 }
 
 .badges-group h3 {
-  padding: 0.5rem 0;
+  padding-bottom: 0.5rem;
   font-size: 16px;
 }
 
@@ -319,7 +319,6 @@ img {
   display: flex;
   justify-content: space-evenly;
   gap: 0.25rem 0rem;
-  padding: 0 0.25rem;
 }
 
 .badges-group li {
@@ -333,6 +332,12 @@ img {
   font-size: 12px;
 }
 
+.multiple-badge-stripes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 @media (min-width: 640px){
   .badges-group ul {
     justify-content: center;
@@ -341,6 +346,10 @@ img {
 
   .badges-group li {
     width: 3rem;
+  }
+
+  .multiple-badge-stripes {
+    gap: 0.5rem;
   }
 }
 
@@ -358,6 +367,10 @@ img {
 
   .presentation p {
     margin-bottom: 1rem;
+  }
+
+  .badges-group {
+    width: min-content;
   }
 
   .badges-stack {
@@ -384,8 +397,8 @@ img {
   }
 
   .multiple-badge-stripes {
-    display: flex;
-    height: 20rem;
+    flex-direction: row;
+    height: 19rem;
   }
 
   .multiple-badge-stripes ul:nth-child(even) {
