@@ -338,7 +338,7 @@ img {
   gap: 0.25rem;
 }
 
-@media (min-width: 640px){
+@media (min-width: 640px) {
   .badges-group ul {
     justify-content: center;
     gap: 0.25rem 1rem;
@@ -354,7 +354,7 @@ img {
 }
 
 @media (min-width: 768px) {
-  .about-section .page-row-content{
+  .about-section .page-row-content {
     display: flex;
     justify-content: space-around;
   }
@@ -408,4 +408,50 @@ img {
   .multiple-badge-stripes ul:nth-child(odd) {
     margin-bottom: auto;
   }
+}
+
+.projects-section h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.projects-section p {
+  text-indent: 1.5rem;
+}
+
+.projects-section article {
+  background-color: var(--background-alt);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.project-visuals {
+  position: relative;
+  max-height: 20rem;
+  margin: 1rem auto;
+  width: fit-content;
+}
+
+.project-visuals img {
+  max-height: inherit;
+  width: auto;
+  border-radius: 1rem;
+}
+
+.project-visuals ul {
+  position: absolute;
+  bottom: -1rem;
+  left: -0.25rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.project-visuals li {
+  background-color: var(--background);
+  border-radius: 99999px;
+  padding: 0.25rem;
+  max-height: 3rem;
+  max-width: 3rem;
 }
