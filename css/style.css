@@ -466,8 +466,8 @@ img {
   }
 
   .projects-section h3 {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .projects-section article:nth-child(even) h3 {
